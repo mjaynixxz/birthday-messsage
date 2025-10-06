@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Fateema! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Fireworks canvas -->
+        <canvas id="fireworks"></canvas>
+
+        <!-- Main content -->
+        <div class="content">
+            <!-- Code Poem Section -->
+            <div class="code-section">
+                <pre class="code-block" id="codePoem"></pre>
+            </div>
+
+            <!-- Interactive Birthday Message -->
+            <div class="message-section hidden" id="messageSection">
+                <h1 class="glitch" data-text="HAPPY BIRTHDAY FATEEMA!">HAPPY BIRTHDAY FATEEMA!</h1>
+                <div class="wish-cards">
+                    <div class="wish-card" onclick="revealWish(this)">
+                        <div class="card-front">🎂 Click Me!</div>
+                        <div class="card-back">May your code always compile on the first try! 💻</div>
+                    </div>
+                    <div class="wish-card" onclick="revealWish(this)">
+                        <div class="card-front">🎁 Click Me!</div>
+                        <div class="card-back">May your bugs be few and your commits be clean! 🐛</div>
+                    </div>
+                    <div class="wish-card" onclick="revealWish(this)">
+                        <div class="card-front">🎈 Click Me!</div>
+                        <div class="card-back">May your life be full of infinite loops of happiness! ∞</div>
+                    </div>
+                    <div class="wish-card" onclick="revealWish(this)">
+                        <div class="card-front">✨ Click Me!</div>
+                        <div class="card-back">May all your dreams return true! ✓</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio Player Section -->
+            <div class="audio-section hidden" id="audioSection">
+                <h2>🎵 I Have a Special Message for You... 🎵</h2>
+                <div class="audio-player">
+                    <div class="vinyl-record" id="vinylRecord">
+                        <div class="vinyl-center"></div>
+                        <div class="vinyl-line"></div>
+                    </div>
+                    <div class="audio-controls">
+                        <button class="play-btn" id="playBtn" onclick="toggleAudio()">
+                            <span id="playIcon">▶️</span>
+                        </button>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                        </div>
+                    </div>
+                    <audio id="birthdayAudio" preload="metadata">
+                        <source src="birthday-message.mp3" type="audio/mpeg">
+                        <source src="birthday-message.wav" type="audio/wav">
+                        <source src="birthday-message.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <p class="audio-hint">Click play to hear a special message just for you! 🎧</p>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message hidden" id="finalMessage">
+                <div class="ascii-cake">
+                    <pre>
+         ,,,,,
+        |||||||||
+      |||||||||||||
+      |||||||||||||
+  ~~~~~~~~~~~~~~~~~
+   Happy Birthday!
+      Fateema Nasir
+  ~~~~~~~~~~~~~~~~~
+                    </pre>
+                </div>
+                <button class="restart-btn" onclick="restart()">🔄 Restart Experience</button>
+            </div>
+        </div>
+
+        <!-- Confetti -->
+        <div class="confetti-container" id="confetti"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

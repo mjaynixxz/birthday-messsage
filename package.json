@@ -1,0 +1,13 @@
+{
+  "name": "fateema-birthday",
+  "version": "1.0.0",
+  "description": "Interactive birthday card for Fateema Nasir",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Build complete - static site ready for deployment'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true
+}
